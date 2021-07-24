@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val compileKotlin: KotlinCompile by tasks
-compileKotlin.kotlinOptions { jvmTarget = "16" }
+compileKotlin.kotlinOptions { jvmTarget = "8" }
 
 val outputName = "EconomyAPI"
 val outputDir = "OUTPUT"
@@ -37,22 +37,18 @@ tasks.jar {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
     mavenCentral()
-    maven("https://repo.kinqdos.de/artifactory/kinqdos-repo")
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
     maven("https://repo.codemc.io/repository/maven-snapshots/")
     maven("https://repo.codemc.io/repository/maven-public/")
     maven("https://jitpack.io")
 }
 
 dependencies {
-    implementation("com.kinqdos", "spigot", "1.17")
-    implementation("com.kinqdos", "SpigotLibrary", "1.16.4-V1.0.3")
     implementation("com.github.jitpack", "gradle-simple", "1.1")
     implementation(kotlin("stdlib-jdk8"))
 }
