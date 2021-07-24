@@ -6,12 +6,13 @@ compileKotlin.kotlinOptions { jvmTarget = "16" }
 val outputName = "EconomyAPI"
 val outputDir = "OUTPUT"
 
-group = "de.bydopeman.tabcolor"
+group = "com.github.xIrinaShaykx"
 version = "1.0.0-SNAPSHOT"
 
 
 
 plugins {
+    maven
     java
     kotlin("jvm") version "1.5.21"
 }
@@ -46,10 +47,12 @@ repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
     maven("https://repo.codemc.io/repository/maven-snapshots/")
     maven("https://repo.codemc.io/repository/maven-public/")
+    maven("https://jitpack.io")
 }
 
 dependencies {
     implementation("com.kinqdos", "spigot", "1.17")
     implementation("com.kinqdos", "SpigotLibrary", "1.16.4-V1.0.3")
+    implementation("com.github.jitpack", "gradle-simple", "1.1")
     implementation(kotlin("stdlib-jdk8"))
 }
