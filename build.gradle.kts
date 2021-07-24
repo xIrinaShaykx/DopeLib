@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val compileKotlin: KotlinCompile by tasks
-compileKotlin.kotlinOptions { jvmTarget = "8" }
+compileKotlin.kotlinOptions { jvmTarget = "1.8" }
 
 val outputName = "EconomyAPI"
 val outputDir = "OUTPUT"
@@ -17,15 +17,9 @@ plugins {
     kotlin("jvm") version "1.5.21"
 }
 
-tasks {
-    withType<JavaCompile> {
-        options.fork(mapOf(Pair("jvmArgs", listOf("--add-opens", "jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED"))))
-    }
-}
-
 tasks.jar {
     //Output name
-    duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+    //duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
     archiveFileName.set("$outputName.jar")
     destinationDirectory.set(file("../OUTPUT"))
     //Shade dependecies
@@ -49,6 +43,5 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.jitpack", "gradle-simple", "1.1")
     implementation(kotlin("stdlib-jdk8"))
 }
