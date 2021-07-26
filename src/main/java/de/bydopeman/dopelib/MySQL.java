@@ -1,4 +1,4 @@
-package de.bydopeman.economy.main;
+package de.bydopeman.dopelib;
 
 import java.sql.*;
 

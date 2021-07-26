@@ -1,4 +1,4 @@
-package de.bydopeman.economy.main;
+package de.bydopeman.dopelib;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;

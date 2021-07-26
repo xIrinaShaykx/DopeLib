@@ -1,4 +1,4 @@
-package de.bydopeman.economy.main;
+package de.bydopeman.dopelib;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
