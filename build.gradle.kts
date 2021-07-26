@@ -37,11 +37,13 @@ java {
 
 repositories {
     mavenCentral()
+    maven("https://repo.kinqdos.de/artifactory/kinqdos-repo")
     maven("https://repo.codemc.io/repository/maven-snapshots/")
     maven("https://repo.codemc.io/repository/maven-public/")
     maven("https://jitpack.io")
 }
 
 dependencies {
+    implementation("com.kinqdos", "spigot", "1.17")
     implementation(kotlin("stdlib-jdk8"))
 }
